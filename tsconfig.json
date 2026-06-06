@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@core": ["src/core/index.ts"],
+      "@core/*": ["src/core/*"],
+      "@meetings": ["src/meetings/index.ts"],
+      "@meetings/*": ["src/meetings/*"],
+      "@store": ["src/store/index.ts"],
+      "@store/*": ["src/store/*"],
+      "@extraction": ["src/extraction/index.ts"],
+      "@extraction/*": ["src/extraction/*"],
+      "@notion": ["src/notion/index.ts"],
+      "@notion/*": ["src/notion/*"],
+      "@brain": ["src/brain/index.ts"],
+      "@brain/*": ["src/brain/*"],
+      "@graph": ["src/graph/index.ts"],
+      "@graph/*": ["src/graph/*"],
+      "@ingestion": ["src/ingestion/index.ts"],
+      "@ingestion/*": ["src/ingestion/*"],
+      "@discord": ["src/discord/index.ts"],
+      "@discord/*": ["src/discord/*"],
+      "@server": ["src/server/index.ts"],
+      "@server/*": ["src/server/*"]
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+admin/dist/
+benchmarks/rust-sqlite/target/
+
+# Runtime data — SQLite brain, journals, probes, config
+data/
+*.sqlite
+*.sqlite-journal
+*.sqlite.probe
+
+# Generated benchmark / gauntlet run outputs
+reports/
+
+# Process + temp artifacts
+.tmp/
+_tmp_*
+*.pid
+*.log
+.perry-db-path
+
+# Python sidecar (Graphiti)
+integrations/graphiti/.venv/
+__pycache__/
+*.pyc
+
+# Secrets — keep the example
+.env
+.env.*
+!.env.example
