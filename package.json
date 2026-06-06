@@ -2,7 +2,7 @@
   "name": "@superintelligent/company-brain",
   "private": true,
   "version": "0.0.0",
-  "description": "Superintelligent Group's open-source Company Brain — a protocol and reference implementation that unifies an organization's knowledge. Bundles Perry (meeting documentation) and Inky (GitHub-activity standups) as implementations; used by customers such as Doppel Labs.",
+  "description": "Superintelligent Group's open-source Company Brain — a protocol and reference implementation that unifies an organization's knowledge. Bundles Perry (meeting documentation) and Inky (GitHub-activity standups) as implementations. Made in collaboration with The Augmentation Company (https://theaugmentation.co/).",
   "packageManager": "pnpm@10.25.0",
   "engines": {
     "node": ">=24",

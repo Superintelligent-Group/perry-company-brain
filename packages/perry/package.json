@@ -51,6 +51,7 @@
     "ontology:repair": "node scripts/ontology-repair.cjs"
   },
   "dependencies": {
+    "@inky/core": "workspace:*",
     "@ai-sdk/togetherai": "^2.0.53",
     "@notionhq/client": "^5.0.0",
     "ai": "^6.0.197",

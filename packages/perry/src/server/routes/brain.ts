@@ -1,11 +1,21 @@
 // routes/brain — brain endpoints for the admin HTTP server
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { getBrainToolChangedSince, getBrainToolEvidence, getBrainToolProjectState, getCompanyBrainInsights, getOntologyHealthReport, getOntologyIndex, queryEvidenceFor, queryOntologyChangedSince, summarizeOntology } from "@brain";
+import { generateActivityStandup, getBrainToolChangedSince, getBrainToolEvidence, getBrainToolProjectState, getCompanyBrainInsights, getOntologyHealthReport, getOntologyIndex, queryEvidenceFor, queryOntologyChangedSince, summarizeOntology } from "@brain";
 import { getGraphEntityContext, getGraphEvidence, getGraphTimeline, listGraphEntities, listGraphFacts, projectMultiplayerState, searchGraphMemory } from "@graph";
 import { flushFtsQueue, listActionItems, listDecisions, searchBrain } from "@store";
 import { httpError, parseOntologyType, parseOntologyTypes, requireAdmin, runOntologyQuery, sendJson } from "../http-util";
 
 export async function handleBrain(req: IncomingMessage, res: ServerResponse, url: URL): Promise<boolean> {
+  if (req.method === "GET" && url.pathname === "/api/brain/activity-standup") {
+    const windowHours = url.searchParams.get("windowHours");
+    const standup = await generateActivityStandup({
+      windowHours: windowHours ? Number(windowHours) : undefined,
+      mechanical: url.searchParams.get("mechanical") === "true",
+    });
+    sendJson(res, 200, standup);
+    return true;
+  }
+
   if (req.method === "GET" && url.pathname === "/api/brain/search") {
     const types = (url.searchParams.get("types") ?? "")
       .split(",")

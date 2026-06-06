@@ -84,6 +84,9 @@ importers:
       '@ai-sdk/togetherai':
         specifier: ^2.0.53
         version: 2.0.53(zod@3.25.76)
+      '@inky/core':
+        specifier: workspace:*
+        version: link:../../inky/packages/core
       '@notionhq/client':
         specifier: ^5.0.0
         version: 5.22.0

@@ -2,6 +2,7 @@
 export * from "./analytics";
 export * from "./discord-ontology";
 export * from "./fts-worker";
+export * from "./github-activity";
 export * from "./health";
 export * from "./insights";
 export * from "./ontology-health";
