@@ -1,0 +1,12 @@
+[project]
+name = "perry-graphiti-bridge"
+version = "0.1.0"
+description = "Tiny HTTP bridge between Perry's TypeScript runtime and Graphiti's Python API."
+requires-python = ">=3.10,<4"
+dependencies = [
+  "graphiti-core>=0.29.1",
+  "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+falkordb = ["graphiti-core[falkordb]>=0.29.1"]
