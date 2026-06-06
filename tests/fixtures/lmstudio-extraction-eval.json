@@ -1,0 +1,36 @@
+[
+  {
+    "id": "wallace-replay-acl",
+    "title": "Wallace Company Brain Review",
+    "calendarTitle": "Wallace engineering sync",
+    "folderName": "Wallace",
+    "startedAt": "2026-05-23T15:00:00.000Z",
+    "attendees": [
+      { "name": "Ada" },
+      { "name": "Ben" }
+    ],
+    "summaryMarkdown": "Decisions:\n- Ship the Wallace graph replay diff and expose missing readback details in the admin panel.\n- Keep Discord brain commands limited to the brain-admin role.\n\nAction items:\n- Ada: Add Discord brain ACL tests by Friday.\n- Ben: Validate repository doppel-labs/perry-discord-bot and customer Acme routing evidence.",
+    "expected": {
+      "decisionKeywords": ["graph replay diff", "brain-admin"],
+      "actionKeywords": ["Discord brain ACL", "Validate repository"],
+      "entityKeywords": ["doppel-labs/perry-discord-bot", "Acme"]
+    }
+  },
+  {
+    "id": "notion-wiki-ops",
+    "title": "Notion Wiki Operations Planning",
+    "calendarTitle": "Perry operations review",
+    "folderName": "Perry",
+    "startedAt": "2026-05-23T16:00:00.000Z",
+    "attendees": [
+      { "name": "Maya" },
+      { "name": "Iris" }
+    ],
+    "summaryMarkdown": "Decisions:\n- Notion decisions, action items, and projects will use separate data sources with Perry dry-run write contracts before production writes.\n- LM Studio evaluation should compare local Gemma settings using bounded extraction prompts.\n\nAction items:\n- Maya: Run the strict local brain gauntlet after Graphiti is online.\n- Iris: Document backup and restore steps for Perry SQLite and Graphiti Neo4j.",
+    "expected": {
+      "decisionKeywords": ["separate data sources", "LM Studio evaluation"],
+      "actionKeywords": ["strict local brain gauntlet", "backup and restore"],
+      "entityKeywords": ["Notion", "Graphiti"]
+    }
+  }
+]

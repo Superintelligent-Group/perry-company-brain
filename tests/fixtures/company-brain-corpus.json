@@ -1,0 +1,93 @@
+[
+  {
+    "id": "wallace-onboarding-1",
+    "payload": {
+      "note_id": "wallace-onboarding-1",
+      "title": "Wallace Onboarding Architecture",
+      "summary": "Decisions:\n- Ada owns Wallace onboarding until the Discord handoff is stable.\n- Wallace onboarding should publish approved customer-facing notes to Notion.\n\nAction items:\n- Ben: Prepare the Discord onboarding checklist by 2026-05-30.\n- Ada: Review the Wallace routing rule.",
+      "my_notes": "Private note: customer escalation details stay out of Discord.",
+      "transcript": "Ada said Wallace onboarding ownership should be explicit before the next customer demo.",
+      "calendar_event": {
+        "title": "Wallace Onboarding Architecture",
+        "start_time": "2026-05-23T14:00:00.000Z"
+      },
+      "attendees": [
+        { "name": "Ada", "email": "ada@doppel.example" },
+        { "name": "Ben", "email": "ben@doppel.example" }
+      ],
+      "folder_name": "Wallace"
+    },
+    "expected": {
+      "decisions": [
+        "Ada owns Wallace onboarding until the Discord handoff is stable.",
+        "Wallace onboarding should publish approved customer-facing notes to Notion."
+      ],
+      "actions": [
+        { "owner": "Ben", "text": "Prepare the Discord onboarding checklist by 2026-05-30." },
+        { "owner": "Ada", "text": "Review the Wallace routing rule." }
+      ],
+      "search": [
+        { "query": "Wallace onboarding", "mustContain": "Wallace onboarding" },
+        { "query": "Discord checklist", "mustContain": "Discord onboarding checklist" }
+      ]
+    }
+  },
+  {
+    "id": "perry-graph-ops-1",
+    "payload": {
+      "note_id": "perry-graph-ops-1",
+      "title": "Perry Graph Operations",
+      "summary": "Decisions:\n- Graphiti remains an async temporal memory sidecar.\n- Perry SQLite remains the source of truth for queue state and approvals.\n\nAction items:\n- Perry: Add graph sync diagnostics to the admin panel.\n- Ada: Define graph retrieval quality questions.",
+      "my_notes": "Private note: local model experiments should remain internal.",
+      "transcript": "The group agreed that Graphiti should never block Notion or Discord posting.",
+      "calendar_event": {
+        "title": "Perry Graph Operations",
+        "start_time": "2026-05-23T15:00:00.000Z"
+      },
+      "folder_name": "Perry"
+    },
+    "expected": {
+      "decisions": [
+        "Graphiti remains an async temporal memory sidecar.",
+        "Perry SQLite remains the source of truth for queue state and approvals."
+      ],
+      "actions": [
+        { "owner": "Perry", "text": "Add graph sync diagnostics to the admin panel." },
+        { "owner": "Ada", "text": "Define graph retrieval quality questions." }
+      ],
+      "search": [
+        { "query": "temporal memory sidecar", "mustContain": "Graphiti remains an async temporal memory sidecar" },
+        { "query": "queue state approvals", "mustContain": "queue state and approvals" }
+      ]
+    }
+  },
+  {
+    "id": "notion-wiki-1",
+    "payload": {
+      "note_id": "notion-wiki-1",
+      "title": "Notion Wiki Publishing",
+      "summary": "Decisions:\n- Notion is the durable wiki surface for approved meeting notes.\n- Discord should receive concise announcements with links back to Notion.\n\nAction items:\n- Mira: Verify Notion database properties before sandbox launch.\n- Perry: Keep private notes out of Discord announcements.",
+      "my_notes": "Private note: wiki taxonomy may change after leadership review.",
+      "transcript": "Mira asked that the Notion page schema be validated before real company rollout.",
+      "calendar_event": {
+        "title": "Notion Wiki Publishing",
+        "start_time": "2026-05-23T16:00:00.000Z"
+      },
+      "folder_name": "Ops"
+    },
+    "expected": {
+      "decisions": [
+        "Notion is the durable wiki surface for approved meeting notes.",
+        "Discord should receive concise announcements with links back to Notion."
+      ],
+      "actions": [
+        { "owner": "Mira", "text": "Verify Notion database properties before sandbox launch." },
+        { "owner": "Perry", "text": "Keep private notes out of Discord announcements." }
+      ],
+      "search": [
+        { "query": "durable wiki surface", "mustContain": "Notion is the durable wiki surface" },
+        { "query": "private notes Discord", "mustContain": "Keep private notes out of Discord announcements" }
+      ]
+    }
+  }
+]

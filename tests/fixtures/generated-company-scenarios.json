@@ -1,0 +1,862 @@
+[
+  {
+    "id": "doppel-labs-01",
+    "payload": {
+      "note_id": "doppel-labs-01",
+      "title": "Atlas v2 Onboarding & Tech Debt Deep Dive",
+      "summary": "Decisions:\n- Perry generated scenario 1 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 1.\n\nAction items:\n- Perry: Evaluate generated scenario 1.\n- Ada: Review generated scenario 1.",
+      "my_notes": "Need follow up with Kai on Atlas Read Replica RTO metrics before signoff.",
+      "transcript": "[PRIVATE_SYNTHETIC_MARKER] Ada: Let's circle back to Atlas v2. The data partitioning strategy seems solid, but I'm concerned about the write path latency under peak load for Acme [TRANSCRIPT_SYNTHETIC_MARKER]. Ben: Agreed on that point. My team owned the initial PoC for Geo-Partitioning, and we saw ~150ms p99 latency increase during our simulated 2x traffic spike test last week. The proposal was to use a dedicated Cross-Region Replication Plane [TRANSCRIPT_SYNTHETIC_MARKER]... [DEBATE START: Infrastructure Cost vs RTO/RPO trade-off]. Transcript Excerpt (Conflict): Mira: \"The current setup hits our RTO of 5 mins on the Read Replica. If we replicate to a secondary region via Linkerd, that's ~30 seconds out-of-band. But\", \"This adds $800k/year in cross-region egress fees.\"\"\"",
+      "calendar_event": {
+        "title": "Atlas v2 Onboarding & Tech Debt Deep Dive",
+        "start_time": "2024-05-15T09:00:00.000Z",
+        "attendees": [
+          {
+            "name": "Ada",
+            "email": "ada@doppel-labs.com"
+          },
+          {
+            "name": "Ben",
+            "email": "ben@doppel-labs.com"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Ada",
+          "email": "ada@doppel-labs.com"
+        },
+        {
+          "name": "Ben",
+          "email": "ben@doppel-labs.com"
+        }
+      ],
+      "folder_name": "Architecture Reviews",
+      "source_url": "https://granola.example/generated/doppel-labs-01"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 1 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 1."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 1."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 1."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 1",
+          "mustContain": "Perry generated scenario 1 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 1."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 0
+    }
+  },
+  {
+    "id": "doppel-labs-02",
+    "payload": {
+      "note_id": "doppel-labs-02",
+      "title": "Notion Wiki - Customer Escalation Flow Review & Gaps",
+      "summary": "Decisions:\n- Perry generated scenario 2 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 2.\n\nAction items:\n- Perry: Evaluate generated scenario 2.\n- Ada: Review generated scenario 2.",
+      "my_notes": "Need to sync with Ops lead (unrecorded) on playbook automation for P1/P2 events.",
+      "transcript": "[PRIVATE_SYNTHETIC_MARKER] Jules: \"I noticed we're still manually creating Jira tickets after the last Sev-1 in the ExampleCo space. This violates our Incident Review Policy.\"\"\"",
+      "calendar_event": {
+        "title": "Notion Wiki - Customer Escalation Flow Review & Gaps",
+        "start_time": "2024-05-16T11:00:00.000Z",
+        "attendees": [
+          {
+            "name": "Iris",
+            "email": "iris@doppel-labs.com"
+          },
+          {
+            "name": "Jules",
+            "email": "jules@doppel-labs.com"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Iris",
+          "email": "iris@doppel-labs.com"
+        },
+        {
+          "name": "Jules",
+          "email": "jules@doppel-labs.com"
+        }
+      ],
+      "folder_name": "Customer Escalations",
+      "source_url": "https://granola.example/generated/doppel-labs-02"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 2 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 2."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 2."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 2."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 2",
+          "mustContain": "Perry generated scenario 2 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 2."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 1
+    }
+  },
+  {
+    "id": "discord-ops-3",
+    "payload": {
+      "note_id": "discord-ops-3",
+      "title": "Discord Ops Customer Escalation",
+      "summary": "Decisions:\n- Jules owns Discord Ops follow-through for customer Helio.\n- Repository doppel-labs/notion-wiki remains the implementation source for Discord Ops.\n\nAction items:\n- Jules: Prepare Discord Ops update for Helio by 2026-06-03.\n- Ada: Review policy SOC2 Evidence Retention for Discord Ops.",
+      "my_notes": "PRIVATE_SYNTHETIC_MARKER Discord Ops has private operator-only details.",
+      "transcript": "TRANSCRIPT_SYNTHETIC_MARKER Jules and Ada discussed Discord Ops in detail.",
+      "calendar_event": {
+        "title": "Discord Ops Customer Escalation",
+        "start_time": "2026-05-25T14:02:00.000Z",
+        "attendees": [
+          {
+            "name": "Jules",
+            "email": "jules@doppel.example"
+          },
+          {
+            "name": "Ada",
+            "email": "ada@doppel.example"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Jules",
+          "email": "jules@doppel.example"
+        },
+        {
+          "name": "Ada",
+          "email": "ada@doppel.example"
+        }
+      ],
+      "folder_name": "Discord Ops",
+      "source_url": "https://granola.example/generated/discord-ops-3"
+    },
+    "expected": {
+      "decisions": [
+        "Jules owns Discord Ops follow-through for customer Helio.",
+        "Repository doppel-labs/notion-wiki remains the implementation source for Discord Ops."
+      ],
+      "actions": [
+        {
+          "owner": "Jules",
+          "text": "Prepare Discord Ops update for Helio by 2026-06-03."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review policy SOC2 Evidence Retention for Discord Ops."
+        }
+      ],
+      "search": [
+        {
+          "query": "Jules owns Discord Ops",
+          "mustContain": "Jules owns Discord Ops follow-through for customer Helio."
+        },
+        {
+          "query": "Discord Ops implementation source",
+          "mustContain": "implementation source"
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 2
+    }
+  },
+  {
+    "id": "graph-memory-4",
+    "payload": {
+      "note_id": "graph-memory-4",
+      "title": "Graph Memory Incident Review",
+      "summary": "Decisions:\n- Sam owns Graph Memory follow-through for customer ExampleCo.\n- Repository doppel-labs/graph-memory remains the implementation source for Graph Memory.\n\nAction items:\n- Sam: Prepare Graph Memory update for ExampleCo by 2026-06-04.\n- Ben: Review policy SOC2 Evidence Retention for Graph Memory.",
+      "my_notes": "PRIVATE_SYNTHETIC_MARKER Graph Memory has private operator-only details.",
+      "transcript": "TRANSCRIPT_SYNTHETIC_MARKER Sam and Ben discussed Graph Memory in detail.",
+      "calendar_event": {
+        "title": "Graph Memory Incident Review",
+        "start_time": "2026-05-25T14:03:00.000Z",
+        "attendees": [
+          {
+            "name": "Sam",
+            "email": "sam@doppel.example"
+          },
+          {
+            "name": "Ben",
+            "email": "ben@doppel.example"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Sam",
+          "email": "sam@doppel.example"
+        },
+        {
+          "name": "Ben",
+          "email": "ben@doppel.example"
+        }
+      ],
+      "folder_name": "Graph Memory",
+      "source_url": "https://granola.example/generated/graph-memory-4"
+    },
+    "expected": {
+      "decisions": [
+        "Sam owns Graph Memory follow-through for customer ExampleCo.",
+        "Repository doppel-labs/graph-memory remains the implementation source for Graph Memory."
+      ],
+      "actions": [
+        {
+          "owner": "Sam",
+          "text": "Prepare Graph Memory update for ExampleCo by 2026-06-04."
+        },
+        {
+          "owner": "Ben",
+          "text": "Review policy SOC2 Evidence Retention for Graph Memory."
+        }
+      ],
+      "search": [
+        {
+          "query": "Sam owns Graph Memory",
+          "mustContain": "Sam owns Graph Memory follow-through for customer ExampleCo."
+        },
+        {
+          "query": "Graph Memory implementation source",
+          "mustContain": "implementation source"
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 3
+    }
+  },
+  {
+    "id": "scenario-01",
+    "payload": {
+      "note_id": "scenario-01",
+      "title": "Perry's initial scoping session for Atlas integration",
+      "summary": "Decisions:\n- Perry generated scenario 5 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 5.\n\nAction items:\n- Perry: Evaluate generated scenario 5.\n- Ada: Review generated scenario 5.",
+      "my_notes": "Need follow-up on Northstar's actual write patterns; Ben mentioned this was out of scope but should be logged anyway.",
+      "transcript": "[MARKER: PRIVATE_SYNTHETIC_MARKER] Transcript Segment 1.0 [TRANSCRIPT_SYNTHETIC_MARKER]: Perri, let's get a sense of the current Atlas state... [TRANSCRIPT_SYNTHETIC_MARKER]]",
+      "calendar_event": {
+        "title": "Perry's initial scoping session for Atlas integration",
+        "start_time": "2026-05-25T14:04:00.000Z",
+        "attendees": [
+          {
+            "name": "Ada",
+            "email": "ada@doppel-labs.com"
+          },
+          {
+            "name": "Ben",
+            "email": "ben@doppel-labs.com"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Ada",
+          "email": "ada@doppel-labs.com"
+        },
+        {
+          "name": "Ben",
+          "email": "ben@doppel-labs.com"
+        }
+      ],
+      "folder_name": "planning_2024-q2",
+      "source_url": "https://granola.example/generated/scenario-01"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 5 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 5."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 5."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 5."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 5",
+          "mustContain": "Perry generated scenario 5 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 5."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 4
+    }
+  },
+  {
+    "id": "scenario-02",
+    "payload": {
+      "note_id": "scenario-02",
+      "title": "Wallace: Incident Review for Meridian Auth Failure",
+      "summary": "Decisions:\n- Perry generated scenario 6 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 6.\n\nAction items:\n- Perry: Evaluate generated scenario 6.\n- Ada: Review generated scenario 6.",
+      "my_notes": "Need follow-up with ExampleCo on their specific session invalidation needs; escalating this past the Infra team.",
+      "transcript": "[MARKER: PRIVATE_SYNTHETIC_MARKER] Incident Review Call [TRANSCRIPT_SYNTHETIC_MARKER]: Kai, let's go through the timeline... [TRANSCRIPT_SYNTHETIC_MARKER]]",
+      "calendar_event": {
+        "title": "Wallace: Incident Review for Meridian Auth Failure",
+        "start_time": "2026-05-25T14:05:00.000Z",
+        "attendees": [
+          {
+            "name": "Kai",
+            "email": "kai@doppel-labs.com"
+          },
+          {
+            "name": "Sam",
+            "email": "sam@doppel-labs.com"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Kai",
+          "email": "kai@doppel-labs.com"
+        },
+        {
+          "name": "Sam",
+          "email": "sam@doppel-labs.com"
+        }
+      ],
+      "folder_name": "incident_review_2024-q1",
+      "source_url": "https://granola.example/generated/scenario-02"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 6 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 6."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 6."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 6."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 6",
+          "mustContain": "Perry generated scenario 6 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 6."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 5
+    }
+  },
+  {
+    "id": "scenario-03",
+    "payload": {
+      "note_id": "scenario-03",
+      "title": "Mira: Product Feedback Loop on Notion Wiki v2.1",
+      "summary": "Decisions:\n- Perry generated scenario 7 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 7.\n\nAction items:\n- Perry: Evaluate generated scenario 7.\n- Ada: Review generated scenario 7.",
+      "my_notes": "Need follow-up with Helio on their specific admin pain points; this is a high-priority ticket.",
+      "transcript": "[MARKER: PRIVATE_SYNTHETIC_MARKER] Notion Wiki Feedback Call [TRANSCRIPT_SYNTHETIC_MARKER]: Mira, let's capture the key themes... [TRANSCRIPT_SYNTHETIC_MARKER]]",
+      "calendar_event": {
+        "title": "Mira: Product Feedback Loop on Notion Wiki v2.1",
+        "start_time": "2026-05-25T14:06:00.000Z",
+        "attendees": [
+          {
+            "name": "Iris",
+            "email": "iris@doppel-labs.com"
+          },
+          {
+            "name": "Jules",
+            "email": "jules@doppel-labs.com"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Iris",
+          "email": "iris@doppel-labs.com"
+        },
+        {
+          "name": "Jules",
+          "email": "jules@doppel-labs.com"
+        }
+      ],
+      "folder_name": "product_feedback_2024-q1",
+      "source_url": "https://granola.example/generated/scenario-03"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 7 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 7."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 7."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 7."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 7",
+          "mustContain": "Perry generated scenario 7 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 7."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 6
+    }
+  },
+  {
+    "id": "scenario-04",
+    "payload": {
+      "note_id": "scenario-04",
+      "title": "ExampleCo: Sales/Product Feedback on Graph Memory v1.2",
+      "summary": "Decisions:\n- Perry generated scenario 8 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 8.\n\nAction items:\n- Perry: Evaluate generated scenario 8.\n- Ada: Review generated scenario 8.",
+      "my_notes": "Needs explicit sign-off from Platform Lead before commiting to the bulk update plan; Sales is pushing hard on this.",
+      "transcript": "[MARKER: PRIVATE_SYNTHETIC_MARKER] Graph Memory Feedback Call [TRANSCRIPT_SYNTHETIC_MARKER]: Kai, let's summarize... [TRANSCRIPT_SYNTHETIC_MARKER]]",
+      "calendar_event": {
+        "title": "ExampleCo: Sales/Product Feedback on Graph Memory v1.2",
+        "start_time": "2026-05-25T14:07:00.000Z",
+        "attendees": [
+          {
+            "name": "Kai",
+            "email": "kai@doppel-labs.com"
+          },
+          {
+            "name": "Mira",
+            "email": "iris@doppel-labs.com"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Kai",
+          "email": "kai@doppel-labs.com"
+        },
+        {
+          "name": "Mira",
+          "email": "iris@doppel-labs.com"
+        }
+      ],
+      "folder_name": "sales_product_feedback_2023-q4",
+      "source_url": "https://granola.example/generated/scenario-04"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 8 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 8."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 8."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 8."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 8",
+          "mustContain": "Perry generated scenario 8 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 8."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 7
+    }
+  },
+  {
+    "id": "08",
+    "payload": {
+      "note_id": "08",
+      "title": "Perry Dashboard Redesign: Scope Creep Assessment",
+      "summary": "Decisions:\n- Perry generated scenario 9 should remain structured.\n- Graph Memory should preserve evidence for generated scenario 9.\n\nAction items:\n- Perry: Evaluate generated scenario 9.\n- Ada: Review generated scenario 9.",
+      "my_notes": "Need Ben to pull recent usage data for Atlas module before finalizing scope.",
+      "transcript": "[START_MARKER] Transcript of 1672432000-Meeting: Perry Dashboard V2 Scope Creep Assessment. Attendees: Ada, Ben, Kai. [TRANSCRIPT_MARKER]: 09:05 - Ada stated 'The new Graph Memory metrics are critical for Northstar adoption.'' 09:15 - Ben noted 'This falls outside the original Q3 MVP scope by an estimated 4 weeks.'' 09:25 - Kai raised concern 'Conflicting decisions on ownership of Atlas usage trends.' [TRANSCRIPT_MARKER]: 09:30 - Conclusion reached to defer Graph Memory metrics to Q4 planning, retaining core modules for MVP. [END_MARKER]",
+      "calendar_event": {
+        "title": "Perry Dashboard Redesign: Scope Creep Assessment",
+        "start_time": "2026-05-25T14:08:00.000Z",
+        "attendees": [
+          {
+            "name": "Ada",
+            "email": "ada@doppel.labs"
+          },
+          {
+            "name": "Ben",
+            "email": "ben@doppel.labs"
+          },
+          {
+            "name": "Kai",
+            "email": "kai@doppel.labs"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Ada",
+          "email": "ada@doppel.labs"
+        },
+        {
+          "name": "Ben",
+          "email": "ben@doppel.labs"
+        },
+        {
+          "name": "Kai",
+          "email": "kai@doppel.labs"
+        }
+      ],
+      "folder_name": "product-strategy/perry-dashboard",
+      "source_url": "https://granola.example/generated/08"
+    },
+    "expected": {
+      "decisions": [
+        "Perry generated scenario 9 should remain structured.",
+        "Graph Memory should preserve evidence for generated scenario 9."
+      ],
+      "actions": [
+        {
+          "owner": "Perry",
+          "text": "Evaluate generated scenario 9."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review generated scenario 9."
+        }
+      ],
+      "search": [
+        {
+          "query": "Perry generated scenario 9",
+          "mustContain": "Perry generated scenario 9 should remain structured."
+        },
+        {
+          "query": "Graph Memory should preserve",
+          "mustContain": "Graph Memory should preserve evidence for generated scenario 9."
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 8
+    }
+  },
+  {
+    "id": "graph-memory-10",
+    "payload": {
+      "note_id": "graph-memory-10",
+      "title": "Graph Memory Product Feedback",
+      "summary": "Decisions:\n- Kai owns Graph Memory follow-through for customer Northstar.\n- Repository doppel-labs/perry-discord-bot remains the implementation source for Graph Memory.\n\nAction items:\n- Kai: Prepare Graph Memory update for Northstar by 2026-06-10.\n- Perry: Review policy SOC2 Evidence Retention for Graph Memory.",
+      "my_notes": "PRIVATE_SYNTHETIC_MARKER Graph Memory has private operator-only details.",
+      "transcript": "TRANSCRIPT_SYNTHETIC_MARKER Kai and Perry discussed Graph Memory in detail.",
+      "calendar_event": {
+        "title": "Graph Memory Product Feedback",
+        "start_time": "2026-05-25T14:09:00.000Z",
+        "attendees": [
+          {
+            "name": "Kai",
+            "email": "kai@doppel.example"
+          },
+          {
+            "name": "Perry",
+            "email": "perry@doppel.example"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Kai",
+          "email": "kai@doppel.example"
+        },
+        {
+          "name": "Perry",
+          "email": "perry@doppel.example"
+        }
+      ],
+      "folder_name": "Graph Memory",
+      "source_url": "https://granola.example/generated/graph-memory-10"
+    },
+    "expected": {
+      "decisions": [
+        "Kai owns Graph Memory follow-through for customer Northstar.",
+        "Repository doppel-labs/perry-discord-bot remains the implementation source for Graph Memory."
+      ],
+      "actions": [
+        {
+          "owner": "Kai",
+          "text": "Prepare Graph Memory update for Northstar by 2026-06-10."
+        },
+        {
+          "owner": "Perry",
+          "text": "Review policy SOC2 Evidence Retention for Graph Memory."
+        }
+      ],
+      "search": [
+        {
+          "query": "Kai owns Graph Memory",
+          "mustContain": "Kai owns Graph Memory follow-through for customer Northstar."
+        },
+        {
+          "query": "Graph Memory implementation source",
+          "mustContain": "implementation source"
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 9
+    }
+  },
+  {
+    "id": "atlas-11",
+    "payload": {
+      "note_id": "atlas-11",
+      "title": "Atlas Planning",
+      "summary": "Decisions:\n- Jules owns Atlas follow-through for customer Meridian.\n- Repository doppel-labs/notion-wiki remains the implementation source for Atlas.\n\nAction items:\n- Jules: Prepare Atlas update for Meridian by 2026-06-11.\n- Ada: Review policy SOC2 Evidence Retention for Atlas.",
+      "my_notes": "PRIVATE_SYNTHETIC_MARKER Atlas has private operator-only details.",
+      "transcript": "TRANSCRIPT_SYNTHETIC_MARKER Jules and Ada discussed Atlas in detail.",
+      "calendar_event": {
+        "title": "Atlas Planning",
+        "start_time": "2026-05-25T14:10:00.000Z",
+        "attendees": [
+          {
+            "name": "Jules",
+            "email": "jules@doppel.example"
+          },
+          {
+            "name": "Ada",
+            "email": "ada@doppel.example"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Jules",
+          "email": "jules@doppel.example"
+        },
+        {
+          "name": "Ada",
+          "email": "ada@doppel.example"
+        }
+      ],
+      "folder_name": "Atlas",
+      "source_url": "https://granola.example/generated/atlas-11"
+    },
+    "expected": {
+      "decisions": [
+        "Jules owns Atlas follow-through for customer Meridian.",
+        "Repository doppel-labs/notion-wiki remains the implementation source for Atlas."
+      ],
+      "actions": [
+        {
+          "owner": "Jules",
+          "text": "Prepare Atlas update for Meridian by 2026-06-11."
+        },
+        {
+          "owner": "Ada",
+          "text": "Review policy SOC2 Evidence Retention for Atlas."
+        }
+      ],
+      "search": [
+        {
+          "query": "Jules owns Atlas follow-through",
+          "mustContain": "Jules owns Atlas follow-through for customer Meridian."
+        },
+        {
+          "query": "Atlas implementation source",
+          "mustContain": "implementation source"
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 10
+    }
+  },
+  {
+    "id": "perry-12",
+    "payload": {
+      "note_id": "perry-12",
+      "title": "Perry Architecture",
+      "summary": "Decisions:\n- Sam owns Perry follow-through for customer Acme.\n- Repository doppel-labs/graph-memory remains the implementation source for Perry.\n\nAction items:\n- Sam: Prepare Perry update for Acme by 2026-06-12.\n- Ben: Review policy SOC2 Evidence Retention for Perry.",
+      "my_notes": "PRIVATE_SYNTHETIC_MARKER Perry has private operator-only details.",
+      "transcript": "TRANSCRIPT_SYNTHETIC_MARKER Sam and Ben discussed Perry in detail.",
+      "calendar_event": {
+        "title": "Perry Architecture",
+        "start_time": "2026-05-25T14:11:00.000Z",
+        "attendees": [
+          {
+            "name": "Sam",
+            "email": "sam@doppel.example"
+          },
+          {
+            "name": "Ben",
+            "email": "ben@doppel.example"
+          }
+        ]
+      },
+      "attendees": [
+        {
+          "name": "Sam",
+          "email": "sam@doppel.example"
+        },
+        {
+          "name": "Ben",
+          "email": "ben@doppel.example"
+        }
+      ],
+      "folder_name": "Perry",
+      "source_url": "https://granola.example/generated/perry-12"
+    },
+    "expected": {
+      "decisions": [
+        "Sam owns Perry follow-through for customer Acme.",
+        "Repository doppel-labs/graph-memory remains the implementation source for Perry."
+      ],
+      "actions": [
+        {
+          "owner": "Sam",
+          "text": "Prepare Perry update for Acme by 2026-06-12."
+        },
+        {
+          "owner": "Ben",
+          "text": "Review policy SOC2 Evidence Retention for Perry."
+        }
+      ],
+      "search": [
+        {
+          "query": "Sam owns Perry follow-through",
+          "mustContain": "Sam owns Perry follow-through for customer Acme."
+        },
+        {
+          "query": "Perry implementation source",
+          "mustContain": "implementation source"
+        }
+      ],
+      "expectedPrivacyMarkers": [
+        "PRIVATE_SYNTHETIC_MARKER",
+        "TRANSCRIPT_SYNTHETIC_MARKER"
+      ]
+    },
+    "generated": {
+      "model": "gemma-4-e4b-claude-abliterated",
+      "seed": 73,
+      "index": 11
+    }
+  }
+]
