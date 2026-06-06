@@ -1,0 +1,5 @@
+# Company-brain monorepo. Perry (meeting docs) lives in packages/*, Inky
+# (GitHub-activity standups) is vendored under inky/ with its own packages.
+packages:
+  - "packages/*"
+  - "inky/packages/*"

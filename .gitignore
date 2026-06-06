@@ -3,8 +3,8 @@ node_modules/
 
 # Build output
 dist/
-admin/dist/
-benchmarks/rust-sqlite/target/
+**/dist/
+**/target/
 
 # Runtime data — SQLite brain, journals, probes, config
 data/
@@ -23,7 +23,7 @@ _tmp_*
 .perry-db-path
 
 # Python sidecar (Graphiti)
-integrations/graphiti/.venv/
+**/.venv/
 __pycache__/
 *.pyc
 
