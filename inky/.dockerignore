@@ -1,0 +1,21 @@
+# Rebuilt inside the image (any package in the workspace)
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+
+# Local secrets / scratch — must never enter the build context
+.env
+.env.local
+*.local
+.inky-output
+inky.config.json
+
+# VCS / docs / editor noise
+.git
+.gitignore
+docs
+.playwright-mcp
+.DS_Store
+.idea
+.vscode
+*.log

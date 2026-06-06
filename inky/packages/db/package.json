@@ -1,0 +1,27 @@
+{
+  "name": "@inky/db",
+  "version": "0.0.1",
+  "description": "Inky's Phase 6 data layer — Drizzle schema (tenants, installations, configs, channels, runs, billing) and the Config↔DB mapping that lets the multi-tenant worker build a core Config from rows.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@inky/core": "workspace:*",
+    "drizzle-orm": "^0.38.0",
+    "pg": "^8.21.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.1",
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

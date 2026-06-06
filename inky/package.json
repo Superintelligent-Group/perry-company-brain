@@ -1,0 +1,22 @@
+{
+  "name": "inky-workspace",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Your team's daily standup, written for you. A Discord bot that reads org GitHub activity and writes the standup automatically. (pnpm workspace root — the self-hostable tool lives in packages/core.)",
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "dev": "pnpm --filter @inky/core dev",
+    "collect": "pnpm --filter @inky/core collect",
+    "standup": "pnpm --filter @inky/core standup",
+    "serve": "pnpm --filter @inky/core serve"
+  }
+}

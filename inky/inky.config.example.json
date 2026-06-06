@@ -1,0 +1,33 @@
+{
+  "org": "your-org",
+  "repos": [],
+  "staleDays": "auto",
+  "windowHours": 24,
+  "excludeBots": true,
+  "extraNoisePatterns": [],
+  "aliases": {
+    "alice": ["alice-personal", "alice@example.com"],
+    "bob": ["bob-laptop", "bob@bobs-macbook-pro.local"]
+  },
+  "discord": {
+    "applicationId": "",
+    "guildId": ""
+  },
+  "schedule": {
+    "timezone": "UTC",
+    "jobs": [
+      { "cron": "0 9 * * 1-5", "windowHours": 24, "label": "daily" },
+      { "cron": "0 9 * * 1", "windowHours": 168, "label": "weekly" }
+    ]
+  },
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "format": "bullets",
+  "stats": "auto",
+  "statsPerPerson": true,
+  "roadmap": {
+    "enabled": false,
+    "source": "github-milestones",
+    "atRiskDays": 7
+  }
+}

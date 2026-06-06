@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.local
+*.local
+
+# Inky runtime config (may contain tokens) — commit inky.config.example.* instead
+inky.config.json
+inky.config.local.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Playwright MCP screenshots
+.playwright-mcp/
+
+# local standup output (scratch)
+.inky-output/

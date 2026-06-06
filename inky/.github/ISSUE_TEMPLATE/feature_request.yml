@@ -1,0 +1,39 @@
+name: 💡 Feature request
+description: Suggest a capability — a new delivery target, roadmap source, report knob, etc.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can't you do today? What's the friction or gap?
+      placeholder: My team plans in Linear, not GitHub Milestones, so the Status-vs-plan block is always empty…
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you'd like
+      description: The capability you want. Rough is fine.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Roughly where this lands (see the roadmap for the three tracks).
+      options:
+        - collect / GitHub data
+        - summarize / the AI write-up
+        - render / report format & stats
+        - reconcile / roadmap & status-vs-plan
+        - delivery (Discord, Slack, …)
+        - trigger (schedule, slash command)
+        - hosted tier / dashboard
+        - docs / onboarding
+        - other
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Workarounds you've tried or other approaches you weighed.

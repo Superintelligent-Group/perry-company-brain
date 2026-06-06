@@ -1,0 +1,42 @@
+{
+  "name": "@inky/core",
+  "version": "0.0.1",
+  "description": "Inky's host-agnostic core — reads org GitHub activity and writes the standup. Ships the `inky` CLI (collect/standup/serve) and the collect→reconcile→summarize→render pipeline.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "inky": "./dist/cli.js"
+  },
+  "//exports": "Internal-monorepo source exports: tsx/tsc resolve the .ts directly so dependent packages typecheck/test without building core first. The `inky` bin still runs the compiled dist/cli.js (relative imports, unaffected by this map).",
+  "exports": {
+    ".": "./src/index.ts",
+    "./config": "./src/config.ts",
+    "./types": "./src/types.ts",
+    "./standup": "./src/standup.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "collect": "tsx src/cli.ts collect",
+    "standup": "tsx src/cli.ts standup",
+    "serve": "tsx src/cli.ts serve",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@octokit/auth-app": "^8.2.0",
+    "@octokit/rest": "^21.0.2",
+    "croner": "^10.0.1",
+    "discord.js": "^14.26.4",
+    "dotenv": "^16.4.7",
+    "picomatch": "^4.0.4",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/picomatch": "^4.0.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

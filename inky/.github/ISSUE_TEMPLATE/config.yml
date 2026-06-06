@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📘 Setup help (tokens, Discord, deployment)
+    url: https://github.com/Doppel-Labs/inky/tree/main/docs
+    about: GitHub token, Discord bot, and deployment walkthroughs live in docs/.
+  - name: 💬 Questions & ideas (Discussions)
+    url: https://github.com/Doppel-Labs/inky/discussions
+    about: For open-ended questions, show-and-tell, or roadmap discussion.
+  - name: 🔒 Security report
+    url: https://github.com/Doppel-Labs/inky/security/advisories/new
+    about: Found a vulnerability? Report it privately — please don't open a public issue.

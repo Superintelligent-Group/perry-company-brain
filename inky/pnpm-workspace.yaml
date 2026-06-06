@@ -1,0 +1,7 @@
+# Inky is a pnpm workspace. The MIT, self-hostable core lives in packages/core
+# (the `inky` CLI + the collect→reconcile→summarize→render pipeline). The Phase 6
+# managed tier (dashboard, worker, db) will be added under apps/* and packages/*,
+# each depending on @inky/core rather than forking it.
+packages:
+  - 'packages/*'
+  - 'apps/*'

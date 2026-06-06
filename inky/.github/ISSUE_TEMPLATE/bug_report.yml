@@ -1,0 +1,56 @@
+name: 🐙 Bug report
+description: Something Inky did wrong — a broken standup, a crash, a misattribution.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Inky better. Please **don't paste real tokens,
+        webhook URLs, or private repo contents** — redact them first.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did Inky do instead?
+      placeholder: I ran `inky standup --days 1` and the project summary invented a PR that doesn't exist…
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The exact command(s) and any relevant (redacted) config.
+      placeholder: |
+        1. `inky standup --dry-run --days 7`
+        2. Config: repos `[]`, provider `anthropic`, roadmap enabled
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command / mode
+      description: Which command and how it ran (CLI, `serve` worker, `/standup` bot).
+      placeholder: inky serve --once --dry-run
+  - type: dropdown
+    id: provider
+    attributes:
+      label: LLM provider
+      options:
+        - anthropic
+        - groq
+        - openai (or compatible)
+        - none (--mechanical)
+        - n/a
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / output
+      description: Relevant output. Redact tokens, webhook URLs, and private content.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Release tag or `git rev-parse --short HEAD`.
+      placeholder: e.g. main @ da1e565

@@ -1,0 +1,35 @@
+# Render Blueprint — runs Inky's worker: scheduled standups + the /standup bot.
+# A Background Worker (no HTTP port) fits `inky serve`, which connects out over
+# Discord's gateway rather than receiving webhooks.
+#
+# After "New > Blueprint" from this repo, in the Render dashboard:
+#   1. Add a Secret File named  inky.config.json  with your config (org, repos,
+#      aliases, schedule, provider/model). It mounts at /etc/secrets/inky.config.json,
+#      which the start command below points at.
+#   2. Fill in the env vars (GITHUB_TOKEN, one LLM key, DISCORD_WEBHOOK_URL, and
+#      DISCORD_BOT_TOKEN only if you want the /standup command).
+#
+# Run a SINGLE instance — each worker posts on the schedule, so two would double-post.
+services:
+  - type: worker
+    name: inky
+    runtime: node
+    plan: starter # background workers need a paid instance; size up if needed
+    # Invoke pnpm THROUGH corepack (no `corepack enable`, which fails on Render's
+    # read-only /usr/bin). Node is pinned to 22 via .node-version. This is a pnpm
+    # workspace: `run build` (root) builds every package; the CLI is in packages/core.
+    buildCommand: corepack pnpm install --frozen-lockfile && corepack pnpm run build
+    startCommand: node packages/core/dist/cli.js serve --config /etc/secrets/inky.config.json
+    autoDeploy: true
+    envVars:
+      - key: COREPACK_ENABLE_DOWNLOAD_PROMPT # let corepack fetch pnpm non-interactively
+        value: "0"
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: ANTHROPIC_API_KEY # or GROQ_API_KEY / OPENAI_API_KEY, matching config.provider
+        sync: false
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
+      # DISCORD_BOT_TOKEN is optional (only for the /standup slash command) — add it
+      # manually in the service's Environment if/when you want the bot, so the
+      # Blueprint doesn't prompt for a token you may not have.
