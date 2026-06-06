@@ -5,7 +5,7 @@ const {
   enqueueGranolaIngestionJob,
   getIngestionQueueSnapshot,
 } = require("../dist/ingestion/queue.js");
-const { countApprovals, withAuditSuppressed } = require("../dist/store/meeting-store.js");
+const { countApprovals, withAuditSuppressed } = require("../dist/store/index.js");
 
 process.env.PERRY_DB_PATH ||= ":memory:";
 

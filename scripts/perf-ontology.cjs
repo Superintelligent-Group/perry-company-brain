@@ -21,7 +21,7 @@ const {
   listOntologyEntities,
   listOntologyRelations,
   withAuditSuppressed,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const {
   buildOntologyIndex,
   getOntologyIndex,

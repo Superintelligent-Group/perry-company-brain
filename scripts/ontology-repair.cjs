@@ -9,7 +9,7 @@ const {
   closeBrainStore,
   getMeetingStorePath,
   rebuildOntologyMaterializedIndex,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { getOntologyHealthReport } = require("../dist/brain/ontology-health.js");
 
 process.env.PERRY_DB_PATH ||= getMeetingStorePath();

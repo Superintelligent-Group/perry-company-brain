@@ -6,7 +6,7 @@ const {
   listActionItems,
   listDecisions,
   searchBrain,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const {
   drainGraphSyncJobs,
   getFullGraphSyncQueueSnapshot,

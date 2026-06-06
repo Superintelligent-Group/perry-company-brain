@@ -8,7 +8,7 @@ const {
   listDecisions,
   listGraphChangeSets,
   searchBrain,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { drainGraphSyncJobs } = require("../dist/graph/queue.js");
 const { replayGraphChangeSet } = require("../dist/graph/change-set-replay.js");
 const { searchGraphMemory } = require("../dist/graph/memory.js");

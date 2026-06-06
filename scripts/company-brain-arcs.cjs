@@ -7,13 +7,13 @@ const {
   listActionItems,
   listDecisions,
   searchBrain,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { getCompanyBrainInsights } = require("../dist/brain/insights.js");
 const { projectMultiplayerState } = require("../dist/graph/multiplayer-projection.js");
 const { drainGraphSyncJobs } = require("../dist/graph/queue.js");
 const { replayGraphChangeSet } = require("../dist/graph/change-set-replay.js");
 const { searchGraphMemory } = require("../dist/graph/memory.js");
-const { listGraphChangeSets } = require("../dist/store/meeting-store.js");
+const { listGraphChangeSets } = require("../dist/store/index.js");
 const { processGranolaZapierPayload } = require("../dist/ingestion/workflow.js");
 const { createSyntheticCompanyArcCorpus } = require("./synthetic-company-arcs.cjs");
 

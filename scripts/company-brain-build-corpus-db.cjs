@@ -31,7 +31,7 @@ const {
   listActionItems,
   listDecisions,
   meetingRecordFromNote,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { extractKnowledge } = require("../dist/extraction/knowledge.js");
 const { normalizeGranolaZapierPayload } = require("../dist/meetings/note.js");
 const { processGranolaZapierPayload } = require("../dist/ingestion/workflow.js");

@@ -10,7 +10,7 @@ const {
   listDecisions,
   listGraphChangeSets,
   listMeetingRecords,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { processGranolaZapierPayload } = require("../dist/ingestion/workflow.js");
 
 const args = parseArgs(process.argv.slice(2));

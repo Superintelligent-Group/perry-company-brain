@@ -1,4 +1,4 @@
-const { closeBrainStore } = require("../dist/store/meeting-store.js");
+const { closeBrainStore } = require("../dist/store/index.js");
 const {
   getQueryContext,
   queryChangedSince,

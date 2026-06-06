@@ -5,7 +5,7 @@ const {
   insertBackfillMeetingBatch,
   meetingRecordFromNote,
   withAuditSuppressed,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { extractKnowledge } = require("../dist/extraction/knowledge.js");
 const { formatMeetingAnnouncement, normalizeGranolaZapierPayload } = require("../dist/meetings/note.js");
 

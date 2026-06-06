@@ -1,6 +1,6 @@
 const { mkdirSync, writeFileSync } = require("node:fs");
 const { dirname } = require("node:path");
-const { closeBrainStore } = require("../dist/store/meeting-store.js");
+const { closeBrainStore } = require("../dist/store/index.js");
 const { getCompanyBrainHealth } = require("../dist/brain/health.js");
 
 const args = parseArgs(process.argv.slice(2));

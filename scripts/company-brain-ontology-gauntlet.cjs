@@ -1,7 +1,7 @@
 const { mkdirSync, writeFileSync } = require("node:fs");
 const { dirname } = require("node:path");
 const { processGranolaZapierPayload } = require("../dist/ingestion/workflow.js");
-const { closeBrainStore, countMeetingRecords, listGraphChangeSets } = require("../dist/store/meeting-store.js");
+const { closeBrainStore, countMeetingRecords, listGraphChangeSets } = require("../dist/store/index.js");
 const {
   getOntologyIndex,
   queryBlockers,

@@ -24,7 +24,7 @@ process.env.PERRY_GRAPHITI_INCLUDE_PRIVATE_NOTES = "false";
 process.env.PERRY_GRAPHITI_INCLUDE_TRANSCRIPT = "false";
 
 const { processGranolaZapierPayload } = require("../dist/ingestion/workflow.js");
-const { closeBrainStore } = require("../dist/store/meeting-store.js");
+const { closeBrainStore } = require("../dist/store/index.js");
 const { getBrainToolChangedSince, getBrainToolEvidence, getBrainToolProjectState } = require("../dist/brain/tools.js");
 const { getOntologyHealthReport } = require("../dist/brain/ontology-health.js");
 

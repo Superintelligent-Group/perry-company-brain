@@ -6,7 +6,7 @@ const {
   flushFtsQueue,
   listActionItems,
   listDecisions,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { parseOwnershipDecision } = require("../dist/brain/insights.js");
 const { processGranolaZapierPayload } = require("../dist/ingestion/workflow.js");
 const {

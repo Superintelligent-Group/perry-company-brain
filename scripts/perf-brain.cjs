@@ -18,7 +18,7 @@ const {
   upsertMeetingRecord,
   withAuditSuppressed,
   withBrainTransaction,
-} = require("../dist/store/meeting-store.js");
+} = require("../dist/store/index.js");
 const { extractKnowledge } = require("../dist/extraction/knowledge.js");
 
 const count = Number(process.env.PERRY_PERF_COUNT ?? process.argv[2] ?? 1000);
